@@ -1,5 +1,6 @@
 package com.example.web
 
+import com.example.TestcontainersConfig
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -11,8 +12,8 @@ import org.springframework.test.context.TestPropertySource
 import javax.sql.DataSource
 
 @DataJpaTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-class UserRepositoryTest {
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+class UserRepositoryTest : TestcontainersConfig() {
 
     @Autowired
     private lateinit var userRepository: UserRepository
