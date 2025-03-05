@@ -1,5 +1,8 @@
 services:
   postgres:
+#    build:
+#      context: .
+#      dockerfile: docker/postgresDockerFile
     image: postgres:16.0
     environment:
       POSTGRES_USER: appuser
