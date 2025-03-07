@@ -15,7 +15,10 @@ import org.springframework.util.Assert
 fun String?.isEmptyOrNull() = this == null || this.isEmpty();
 
 infix fun Boolean.eq(b: Boolean): Boolean {
-    return this == b
+    val res = this == b
+    if (res) println("OK")
+    else println("WRONG")
+    return res
 }
 
 fun main(args: Array<String>) {
