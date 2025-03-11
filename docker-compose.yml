@@ -18,14 +18,14 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-#  flyway:
-#    image: flyway/flyway:11.3.3
-#    depends_on:
-#      postgres:
-#        condition: service_healthy
-#    command: -url=jdbc:postgresql://postgres:5432/appdb -user=appuser -password=apppass -connectRetries=60 -locations=filesystem:/migrations migrate
-#    volumes:
-#      - ./src/main/resources/db/migration:/migrations
+  flyway:
+    image: flyway/flyway:11.3.3
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: -url=jdbc:postgresql://postgres:5432/appdb -user=appuser -password=apppass -connectRetries=60 -locations=filesystem:/migrations migrate
+    volumes:
+      - ./src/main/resources/db/migration:/migrations
 
 volumes:
   postgres_data:
