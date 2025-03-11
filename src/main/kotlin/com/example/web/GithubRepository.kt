@@ -1,5 +1,6 @@
 package com.example.web
 
+import org.kohsuke.github.GHRepository
 import org.kohsuke.github.GitHub
 import org.springframework.stereotype.Repository
 
@@ -7,5 +8,5 @@ import org.springframework.stereotype.Repository
 class GithubRepository (
     val github: GitHub
 ){
-    fun getRepo(name: String) = github.getRepository(name)
+    fun getRepo(name: String) : GHRepository = github.getRepository(name)
 }
