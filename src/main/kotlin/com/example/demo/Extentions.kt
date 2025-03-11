@@ -14,7 +14,7 @@ import org.springframework.util.Assert
 
 fun String?.isEmptyOrNull() = this == null || this.isEmpty();
 
-infix fun Boolean.eq(b: Boolean): Boolean {
+infix fun <T> T.eq(b: T): Boolean {
     val res = this == b
     if (res) println("OK")
     else println("WRONG")
