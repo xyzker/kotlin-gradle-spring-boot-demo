@@ -36,7 +36,6 @@ dependencies {
     testImplementation 'org.testcontainers:postgresql'
     testImplementation 'org.testcontainers:junit-jupiter'
     runtimeOnly 'org.postgresql:postgresql'
-    testRuntimeOnly 'org.postgresql:postgresql'
 }
 
 kotlin {

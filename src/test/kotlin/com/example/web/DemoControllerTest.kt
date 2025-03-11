@@ -10,7 +10,8 @@ import org.springframework.test.web.reactive.server.WebTestClient
 @SpringBootTest(
     classes = [KotlinGradleSpringBootDemoApplication::class],
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
-)@AutoConfigureWebTestClient
+)
+@AutoConfigureWebTestClient
 class DemoControllerTest {
 
     @Autowired
