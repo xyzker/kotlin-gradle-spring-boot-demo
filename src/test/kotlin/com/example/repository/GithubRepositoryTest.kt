@@ -42,4 +42,11 @@ class GithubRepositoryTest {
         val commitId = githubRepository.getLatestCommitId(repo)
         println(commitId)
     }
+
+    @Test
+    fun downloadFiles() {
+        val repo = githubRepository.getRepo(repoName)
+        val commitId = githubRepository.getLatestCommitId(repo)
+        githubRepository.downloadFiles(repo, commitId, "src/main/resources/db/migration", "db_schema")
+    }
 }
