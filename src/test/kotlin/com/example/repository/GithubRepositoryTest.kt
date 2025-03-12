@@ -38,7 +38,8 @@ class GithubRepositoryTest {
 
     @Test
     fun getLatestCommitId() {
-        val commitId = githubRepository.getLatestCommitId(repoName)
+        val repo = githubRepository.getRepo(repoName)
+        val commitId = githubRepository.getLatestCommitId(repo)
         println(commitId)
     }
 }
