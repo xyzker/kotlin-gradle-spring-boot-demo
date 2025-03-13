@@ -27,6 +27,8 @@ dependencies {
     implementation 'org.flywaydb:flyway-database-postgresql'
     implementation 'org.springframework.boot:spring-boot-docker-compose'
     implementation 'org.kohsuke:github-api:1.327'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+    implementation 'org.springdoc:springdoc-openapi-starter-common:2.8.5'
     //runtimeOnly 'com.h2database:h2' // 使用H2内存数据库
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit5'

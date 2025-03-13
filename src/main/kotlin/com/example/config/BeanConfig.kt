@@ -1,5 +1,7 @@
 package com.example.config
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import org.kohsuke.github.GitHub
 import org.kohsuke.github.GitHubBuilder
 import org.springframework.beans.factory.annotation.Value
@@ -13,4 +15,7 @@ class BeanConfig (
 ) {
     @Bean
     fun github() : GitHub = GitHubBuilder().withOAuthToken(token).build()
+
+    @Bean
+    fun yamlMapper() = ObjectMapper(YAMLFactory())
 }
